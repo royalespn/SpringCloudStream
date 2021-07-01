@@ -18,7 +18,7 @@ Connection to localhost port 29092 [tcp/*] succeeded!
 >>run the below command
 $ gradle bootRun
 
-# 4. Use kafka tool to check kafka brokers dashboard:
+# 4. Use kafka tool to check kafka broker dashboard:
 >> https://kafkatool.com/download.html
 
 ![image](https://user-images.githubusercontent.com/17970459/124080152-e3b2d280-d9fe-11eb-9a63-a6ca71682efd.png)
