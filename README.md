@@ -21,5 +21,6 @@ $ gradle bootRun
 # 4. Use kafka tool to check kafka brokers dashboard:
 >> https://kafkatool.com/download.html
 
-# 5 use rabbitMq managemnt console at http://localhost:15672/ to view the management console
+# 5 use rabbitMq managemnt console to view the management console
+>> at http://localhost:15672/ 
 
