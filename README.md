@@ -50,5 +50,4 @@ curl --location --request POST 'http://localhost:8200/publishToRabbit' \
 # 7 view the console log and messages are received from binders
 ![image](https://user-images.githubusercontent.com/17970459/124080692-823f3380-d9ff-11eb-9f08-edba83186956.png)
 
-
-curl --location --request POST 'http://localhost:8200/publishToRabbit' \
+Thanks for viewing
