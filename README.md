@@ -19,3 +19,6 @@ Connection to localhost port 29092 [tcp/*] succeeded!
 $ gradle bootRun
 
 # 4. Use kafka tool to check kafka brokers dashboard --> https://kafkatool.com/download.html
+
+# 5 use rabbitMq managemnt console at http://localhost:15672/ to view the management console
+
