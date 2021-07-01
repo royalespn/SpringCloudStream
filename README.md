@@ -27,3 +27,28 @@ $ gradle bootRun
 >> at http://localhost:15672/ 
 
 ![image](https://user-images.githubusercontent.com/17970459/124080197-f3321b80-d9fe-11eb-9317-785960228069.png)
+
+# 6 use the curl command to send events to kafka and rabbit and see the messages fired to different binders
+
+curl --location --request POST 'http://localhost:8200/publishToKafka' \
+--header 'Content-Type: application/json' \
+--data-raw '{ 
+    "organizationId":"12345",
+    "accountId":"54321"
+}'
+
+
+curl --location --request POST 'http://localhost:8200/publishToRabbit' \
+--header 'Content-Type: application/json' \
+--data-raw '{ 
+    "organizationId":"00011",
+    "accountId":"000222"
+}'
+
+![image](https://user-images.githubusercontent.com/17970459/124080572-60de4780-d9ff-11eb-87a6-fbf7911a2730.png)
+
+# 7 view the console log and messages are received from binders
+![image](https://user-images.githubusercontent.com/17970459/124080692-823f3380-d9ff-11eb-9f08-edba83186956.png)
+
+
+curl --location --request POST 'http://localhost:8200/publishToRabbit' \
