@@ -1,27 +1,29 @@
 package in.co.iman.SpringCloudStream;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@EnableBinding(Source.class)
+@EnableBinding(OutputChannelRabbitBinding.class)
 @RestController
-public class Producer {
+@Slf4j
+public class ProducerRabbit {
 
     @Autowired
-    Source source;
+    OutputChannelRabbitBinding outputChannelRabbitBinding;
 
-    @PostMapping("/publish")
+    @PostMapping("/publishToRabbit")
     public String publishToKafka(@RequestBody Event event) {
 
-        source.output()
+        outputChannelRabbitBinding.channel()
                 .send(MessageBuilder.withPayload(event)
-                        .setHeader("type", "SipEvent")
+                        .setHeader("type", "Event")
                         .build());
+        log.info("Message sent to rabbit");
         return "Message sent";
     }
 }

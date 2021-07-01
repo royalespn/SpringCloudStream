@@ -4,18 +4,18 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
-          destination: topic-kafka-1
+        OutputChannelKafka:
+          destination: kafka-channel
           binder: kafka
-        output:
-          destination: topic-kafka-1
+        InputChannelKafka:
+          destination: kafka-channel
           binder: kafka
-      binders:
-        kafka:
-          type: kafka
-          environment:
-            spring:
-              ka
+        OutputChannelRabbit:
+          destination: rabbit-channel
+          binder: rabbit
+        InputChannelRabbit:
+          destination: rabbit-channel
+          binder: rabbit
 
 spring.cloud.stream.kafka.binder:
   brokers: 127.0.0.1

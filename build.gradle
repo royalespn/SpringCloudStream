@@ -27,6 +27,7 @@ dependencies {
 	implementation 'org.apache.kafka:kafka-streams'
 	implementation 'org.springframework.cloud:spring-cloud-stream'
 	implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+	implementation 'org.springframework.cloud:spring-cloud-stream-binder-rabbit'
 
 //	implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
 //	implementation 'org.springframework.cloud:spring-cloud-starter-stream-kafka'
