@@ -4,8 +4,8 @@ Spring Cloud Stream with multiple binder on the classpath
 
 # 1. run the single-node kafka and rabbitmq binder:
 find the docker-compose files for kafka and rabbitmq under resources folder: 
->>run it using command:
-docker-compose up
+>>run both the docker-compose files using command:
+docker-compose up -d
 
 # 2 Make sure both the servers are listening on the respective ports: 
 >>run the below commands
