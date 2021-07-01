@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: SpringCloudStream
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: topic-kafka-1
+          binder: kafka
+        output:
+          destination: topic-kafka-1
+          binder: kafka
+      binders:
+        kafka:
+          type: kafka
+          environment:
+            spring:
+              ka
+
+spring.cloud.stream.kafka.binder:
+  brokers: 127.0.0.1
+  defaultBrokerPort: 29092
+
+spring.rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+
+server:
+  port: 8200
